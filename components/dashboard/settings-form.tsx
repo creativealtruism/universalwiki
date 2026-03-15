@@ -120,7 +120,7 @@ export const SettingsForm = ({ profile, userEmail }: SettingsFormProps) => {
                   name="visibility"
                   value={option.value}
                   checked={formData.visibility === option.value}
-                  onChange={(e) => setFormData({ ...formData, visibility: e.target.value })}
+                  onChange={(e) => setFormData({ ...formData, visibility: e.target.value as "public" | "unlisted" | "private" })}
                   className="mt-1"
                 />
                 <div>
