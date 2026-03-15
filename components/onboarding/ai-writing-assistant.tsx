@@ -39,10 +39,35 @@ const PROMPTS: Record<string, string[]> = {
     "Describe my career achievements",
     "Write about my work philosophy",
   ],
+  achievements: [
+    "List my proudest accomplishments",
+    "Describe a major milestone",
+    "Write about recognition I've received",
+  ],
   philosophy: [
     "Articulate my core values",
     "Describe what motivates me",
     "Write about lessons I've learned",
+  ],
+  family: [
+    "Describe my family background",
+    "Write about family traditions",
+    "Capture meaningful relationships",
+  ],
+  hobbies: [
+    "Describe my favorite pastimes",
+    "Write about my creative pursuits",
+    "Capture what brings me joy",
+  ],
+  legacy: [
+    "Write about the impact I hope to leave",
+    "Describe wisdom I'd pass on",
+    "Capture what I want to be remembered for",
+  ],
+  custom: [
+    "Help me write about this topic",
+    "Suggest an interesting angle",
+    "Make this more engaging",
   ],
 }
 

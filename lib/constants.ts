@@ -1,48 +1,86 @@
 import { SectionType } from "./types";
 
+export const SECTION_TYPES: { id: SectionType; label: string }[] = [
+  { id: "early_life", label: "Early Life" },
+  { id: "education", label: "Education" },
+  { id: "career", label: "Career" },
+  { id: "achievements", label: "Achievements" },
+  { id: "philosophy", label: "Philosophy" },
+  { id: "family", label: "Family" },
+  { id: "hobbies", label: "Hobbies" },
+  { id: "legacy", label: "Legacy" },
+  { id: "custom", label: "Custom" },
+];
+
 export const SECTION_PROMPTS: Record<SectionType, string[]> = {
-  intro: [
-    "Who are you in your own words?",
-    "What do you care most about?",
-    "What are you known for?",
-  ],
-  life_story: [
+  early_life: [
     "Where did you grow up?",
-    "What shaped you most?",
-    "What major turning points defined your life?",
-    "What challenges changed you?",
+    "What was your childhood like?",
+    "What early experiences shaped who you became?",
   ],
-  values: [
-    "What principles guide your life?",
-    "What do you believe about meaning, work, love, or community?",
-    "What do you hope people understand about you?",
+  education: [
+    "What schools did you attend?",
+    "What subjects fascinated you most?",
+    "Who were your most influential teachers or mentors?",
   ],
-  work: [
+  career: [
     "What have you built, created, or contributed to?",
     "What projects matter most to you?",
-    "What do you want to be remembered for professionally?",
+    "What are you most proud of professionally?",
+  ],
+  achievements: [
+    "What accomplishments are you most proud of?",
+    "What awards or recognition have you received?",
+    "What goals have you achieved?",
+  ],
+  philosophy: [
+    "What principles guide your life?",
+    "What do you believe about meaning, work, or love?",
+    "What values are most important to you?",
+  ],
+  family: [
+    "Tell us about your family.",
+    "What role has family played in your life?",
+    "What family traditions matter to you?",
+  ],
+  hobbies: [
+    "What do you enjoy doing in your free time?",
+    "What passions do you pursue outside of work?",
+    "What brings you joy?",
   ],
   legacy: [
     "What wisdom would you want to pass on?",
     "What do you hope outlives you?",
     "What kind of impact do you hope to have?",
   ],
+  custom: [
+    "What else would you like to share?",
+    "Is there something unique about you?",
+  ],
 };
 
 export const SECTION_TITLES: Record<SectionType, string> = {
-  intro: "Introduction",
-  life_story: "Life Story",
-  values: "Values & Beliefs",
-  work: "Work & Projects",
+  early_life: "Early Life",
+  education: "Education",
+  career: "Career",
+  achievements: "Achievements",
+  philosophy: "Philosophy",
+  family: "Family",
+  hobbies: "Hobbies",
   legacy: "Legacy",
+  custom: "Custom",
 };
 
 export const SECTION_DESCRIPTIONS: Record<SectionType, string> = {
-  intro: "A brief introduction to who you are and what you care about.",
-  life_story: "The story of your life, including key moments and turning points.",
-  values: "The principles and beliefs that guide your life.",
-  work: "Your professional contributions, projects, and creations.",
-  legacy: "The wisdom and impact you hope to leave behind.",
+  early_life: "Your childhood, upbringing, and formative years.",
+  education: "Your educational journey and learning experiences.",
+  career: "Your professional path, work, and contributions.",
+  achievements: "Notable accomplishments and milestones.",
+  philosophy: "Your values, beliefs, and guiding principles.",
+  family: "Your family life and relationships.",
+  hobbies: "Your interests, passions, and leisure activities.",
+  legacy: "The impact and wisdom you hope to leave behind.",
+  custom: "Additional information you'd like to share.",
 };
 
 export const FREE_TIER_LIMITS = {

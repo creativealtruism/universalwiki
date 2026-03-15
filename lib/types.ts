@@ -26,20 +26,24 @@ export interface SocialLinks {
 }
 
 export type SectionType =
-  | "intro"
-  | "life_story"
-  | "values"
-  | "work"
-  | "legacy";
+  | "early_life"
+  | "education"
+  | "career"
+  | "achievements"
+  | "philosophy"
+  | "family"
+  | "hobbies"
+  | "legacy"
+  | "custom";
 
 export interface ProfileSection {
   id: string;
   profile_id: string;
-  section_type: SectionType;
-  title: string | null;
+  section_type: string;
+  title: string;
   content: string | null;
   display_order: number;
-  is_premium_only: boolean;
+  is_visible: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -65,50 +69,36 @@ export interface OnboardingData {
   birth_year: number | null;
   occupation: string;
   
-  // Step 2-6: Section content
+  // Step 2-4: Section content
   sections: {
-    intro: string;
-    life_story: string;
-    values: string;
-    work: string;
+    early_life: string;
+    career: string;
     legacy: string;
   };
   
-  // Step 7: Media
-  profile_photo_url: string | null;
+  // Step 3: URL slug
+  slug: string;
   
-  // Step 8: Privacy
+  // Step 4: Privacy
   visibility: "public" | "unlisted" | "private";
 }
 
 export type OnboardingStep =
-  | "basic-identity"
-  | "intro"
-  | "life-story"
-  | "values"
-  | "work"
-  | "legacy"
-  | "media"
-  | "privacy";
+  | "basics"
+  | "identity"
+  | "story"
+  | "url";
 
 export const ONBOARDING_STEPS: OnboardingStep[] = [
-  "basic-identity",
-  "intro",
-  "life-story",
-  "values",
-  "work",
-  "legacy",
-  "media",
-  "privacy",
+  "basics",
+  "identity",
+  "story",
+  "url",
 ];
 
 export const STEP_LABELS: Record<OnboardingStep, string> = {
-  "basic-identity": "Basic Identity",
-  "intro": "Introduction",
-  "life-story": "Life Story",
-  "values": "Values & Beliefs",
-  "work": "Work & Projects",
-  "legacy": "Legacy",
-  "media": "Media",
-  "privacy": "Privacy",
+  "basics": "The Basics",
+  "identity": "Your Identity",
+  "story": "Your Story",
+  "url": "Your URL",
 };
