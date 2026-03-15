@@ -48,16 +48,19 @@ export interface ProfileSection {
   updated_at: string;
 }
 
-export type AssetType = "image" | "video" | "audio" | "document";
+export type AssetType = "photo" | "video" | "audio" | "document";
 
 export interface MediaAsset {
   id: string;
   profile_id: string;
+  section_id: string | null;
   asset_type: AssetType;
   url: string;
+  filename: string | null;
   caption: string | null;
-  is_primary: boolean;
+  alt_text: string | null;
   display_order: number;
+  is_profile_photo: boolean;
   created_at: string;
 }
 
